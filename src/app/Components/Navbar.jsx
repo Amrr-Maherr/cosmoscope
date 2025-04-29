@@ -24,7 +24,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-black/30 backdrop-blur-lg border-b border-white/10 text-white sticky top-0 z-50">
+    <nav className="bg-black/30 fixed  backdrop-blur-lg border-b border-white/10 text-white  top-0 z-50 w-full">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           {/* === Mobile Menu Button === */}
@@ -50,8 +50,11 @@ function Navbar() {
           <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
             {/* Logo */}
             <div className="flex flex-shrink-0 items-center">
-              <Link href="/" className="text-xl font-bold hover:text-gray-300 transition duration-150 ease-in-out">
-                Space Explorer
+              <Link
+                href="/"
+                className="text-xl font-bold hover:text-gray-300 transition duration-150 ease-in-out"
+              >
+                CosmoScope
               </Link>
             </div>
 
@@ -79,22 +82,28 @@ function Navbar() {
                     className="inline-flex items-center gap-x-1 px-3 py-2 text-sm font-medium text-white hover:bg-white/10 hover:text-white focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-offset-0"
                   >
                     Explore
-                    <ChevronDown className="ml-1 h-4 w-4 opacity-70" aria-hidden="true" /> {/* <-- Use ChevronDown icon */}
+                    <ChevronDown
+                      className="ml-1 h-4 w-4 opacity-70"
+                      aria-hidden="true"
+                    />{" "}
+                    {/* <-- Use ChevronDown icon */}
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent
                   className="w-48 mt-2 bg-gray-900/90 backdrop-blur-sm border-gray-700 text-white"
                   align="end"
                 >
-                  <DropdownMenuItem asChild className="cursor-pointer focus:bg-gray-700 focus:text-white">
-                    <Link href="/apod/archive">
-                      APOD Archive
-                    </Link>
+                  <DropdownMenuItem
+                    asChild
+                    className="cursor-pointer focus:bg-gray-700 focus:text-white"
+                  >
+                    <Link href="/apod/archive">APOD Archive</Link>
                   </DropdownMenuItem>
-                  <DropdownMenuItem asChild className="cursor-pointer focus:bg-gray-700 focus:text-white">
-                    <Link href="/mars">
-                      Mars Rover Photos
-                    </Link>
+                  <DropdownMenuItem
+                    asChild
+                    className="cursor-pointer focus:bg-gray-700 focus:text-white"
+                  >
+                    <Link href="/mars">Mars Rover Photos</Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
@@ -103,18 +112,17 @@ function Navbar() {
 
           {/* === Search Button (Desktop) === */}
           <div className="hidden md:ml-4 md:flex md:items-center">
-             <Link href="/search" passHref>
-                <Button
-                    variant="ghost"
-                    size="icon" // Use icon size for search button
-                    className="text-gray-300 hover:bg-white/10 hover:text-white focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-offset-0"
-                    aria-label="Search"
-                    >
-                     <Search className="h-5 w-5" /> {/* <-- Use Search icon */}
-                </Button>
-             </Link>
+            <Link href="/search" passHref>
+              <Button
+                variant="ghost"
+                size="icon" // Use icon size for search button
+                className="text-gray-300 hover:bg-white/10 hover:text-white focus-visible:ring-1 focus-visible:ring-white focus-visible:ring-offset-0"
+                aria-label="Search"
+              >
+                <Search className="h-5 w-5" /> {/* <-- Use Search icon */}
+              </Button>
+            </Link>
           </div>
-
         </div>
       </div>
 
@@ -134,31 +142,32 @@ function Navbar() {
             <Link
               href="/neos"
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-               onClick={toggleMobileMenu}
+              onClick={toggleMobileMenu}
             >
               Near Earth Objects
             </Link>
             <Link
-               href="/apod/archive"
-               className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-               onClick={toggleMobileMenu}
+              href="/apod/archive"
+              className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+              onClick={toggleMobileMenu}
             >
-                APOD Archive
+              APOD Archive
             </Link>
             <Link
-               href="/mars"
-               className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-               onClick={toggleMobileMenu}
+              href="/mars"
+              className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+              onClick={toggleMobileMenu}
             >
-                Mars Rover Photos
+              Mars Rover Photos
             </Link>
             {/* Mobile Search Link - Can also include icon */}
             <Link
               href="/search"
               className="flex items-center gap-2 rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white" // Added flex for icon
-               onClick={toggleMobileMenu}
+              onClick={toggleMobileMenu}
             >
-              <Search className="h-5 w-5" /> {/* <-- Optional Search icon for mobile link */}
+              <Search className="h-5 w-5" />{" "}
+              {/* <-- Optional Search icon for mobile link */}
               Search
             </Link>
           </div>
