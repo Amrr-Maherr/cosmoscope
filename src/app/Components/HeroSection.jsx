@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   const videoUrl =
-    "https://videocdn.cdnpk.net/videos/09c7e8c5-73d2-5060-a276-e1fde25def0e/horizontal/previews/clear/large.mp4?token=exp=1745965598~hmac=daec61dac1235ac7602989795258ef835e4b5c6f8e5b82ba48e0e442947dbcfa";
+    "https://videocdn.cdnpk.net/videos/f8e39042-ee8f-56f1-8767-550d57b8319f/horizontal/previews/clear/small.mp4?token=exp=1745966564~hmac=ae887738fdfbdd9137472491057467f59d0d69a62a627b59ddf5772daa963575";
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden px-6">
