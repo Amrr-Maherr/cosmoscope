@@ -2,8 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
-  const videoUrl =
-    "https://videocdn.cdnpk.net/videos/f8e39042-ee8f-56f1-8767-550d57b8319f/horizontal/previews/clear/small.mp4?token=exp=1745966564~hmac=ae887738fdfbdd9137472491057467f59d0d69a62a627b59ddf5772daa963575";
+  const videoUrl = "/0_Earth_Planet_3840x2160.mov";
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden px-6">
